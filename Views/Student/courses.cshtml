@@ -1,0 +1,39 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "courses";
+}
+
+<h2>Liste des cours</h2>
+<hr />
+
+
+<p></p>
+<div class="container col-xs-12">
+    <div class="panel panel-primary">
+      
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th> Nom du cours</th>
+                    
+                    <th> Action</th>
+                </tr>
+                @{
+                    foreach (var c in Model)
+                    {
+                                <tr>
+                                    <td>@c</td>
+ 
+                                    <td>
+                                        <a class="btn btn-warning " href="/student/course/@c">Voir liste des etudiants</a>
+                                        
+                                    </td>
+                                </tr>
+                    }
+                }
+            </table>
+
+        </div>
+    </div>
+</div>
+

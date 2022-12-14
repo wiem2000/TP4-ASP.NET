@@ -1,0 +1,50 @@
+﻿@model tp4asp.Models.Student
+@{
+    ViewData["Title"] = "studentsDetail";
+}
+
+
+<h2>Detail Etudiant </h2>
+<hr />
+
+<div class="container ">
+
+    
+
+    <div class="card" style="width: 70rem;">
+
+        <!-- Card image -->
+        <h3 style="text-align:center">  @Model.first_name @Model.last_name </h3>
+
+        <!-- Card content -->
+        <div class="card-body " style="margin-top:10px">
+
+            <!-- Text -->
+            <ul class="list-group list-group-flush ">
+                <li class="list-group-item"><strong>ID :</strong>  @Model.id</li>
+                <li class="list-group-item"><strong>PRENOM :</strong>  @Model.first_name</li>
+                <li class="list-group-item"><strong>NOM :</strong>  @Model.last_name</li>
+                <li class="list-group-item"> <strong>TEL:</strong>  @Model.phone_number</li>
+                <li class="list-group-item"><strong>COURS: </strong> @Model.course</li>
+                <li class="list-group-item"><strong>UNIVERSITE: </strong> @Model.university</li>
+            </ul>
+
+
+
+        </div>
+        <div class="row">
+           <div class="col-8"></div>
+        <div class="col"> <a class="btn btn-warning " href="/student/all">Liste des etudiants</a> </div>
+        <div class="col"><a class="btn btn-warning " href="/student/courses">Liste des cours</a></div>
+       </div>
+
+    </div>
+
+
+
+
+
+
+
+</div>
+

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<tp4asp.Models.Student>
+@{
+    ViewData["Title"] = "studentsCourse";
+}
+
+<h2>Liste des etudiants</h2>
+<hr />
+
+
+<p></p>
+<div class="container col-xs-12">
+    <div class="panel panel-primary">
+      
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th> ID </th>
+                    <th> PRENOM </th>
+                    <th> NOM </th>
+                    <th> Tel </th>
+                    <th> Universite </th>
+                    <th> Cours</th>
+                    <th> Timestamp</th>
+                    <th> Action</th>
+                </tr>
+                @{
+                    foreach (var p in Model)
+                    {
+                                <tr>
+                                    <td>@p.id</td>
+                                    <td>@p.first_name </td>
+                                    <td>@p.last_name</td>
+                                    <td>@p.phone_number</td>
+                                    <td>@p.university </td>
+                                    
+                                    <td>@p.course </td>
+                                    <td>@p.timestamp</td>
+                                    
+                                    <td>
+                                        <a class="btn btn-warning " href="/student/detail/@p.id">detail etudiant</a>
+                                        
+                                    </td>
+                                </tr>
+                    }
+                }
+            </table>
+
+        </div>
+    </div>
+</div>
+
